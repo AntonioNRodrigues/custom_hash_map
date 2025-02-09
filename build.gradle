@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.custom.hashmap'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '23'
+
+repositories {
+    mavenCentral()
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+
+dependencies {
+    // JUnit 5 dependency for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
